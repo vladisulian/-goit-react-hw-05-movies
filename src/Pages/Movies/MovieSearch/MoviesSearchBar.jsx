@@ -24,13 +24,14 @@ export const MoviesSearch = ({ setMovies }) => {
     e.preventDefault();
 
     if (Searchbar !== '') {
-      FetchByName(Searchbar).then(data =>
-        data > 0
+      FetchByName(Searchbar).then(data => {
+        data.length > 0
           ? setMovies(data)
-          : toast.error('No films found with this title.', toastOptions)
-      );
+          : toast.error('No films found with this title.', toastOptions);
+      });
     }
   };
+  // data > 0
 
   return (
     <>

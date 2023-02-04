@@ -1,4 +1,4 @@
-import { Link, Link as p } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export const MovieItem = ({ movies }) => {
   console.log(movies);
   return movies.map(movie => {
