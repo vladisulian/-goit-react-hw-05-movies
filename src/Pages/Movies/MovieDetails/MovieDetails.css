@@ -7,3 +7,11 @@ p {
   display: flex;
   gap: 20px;
 }
+
+.film-bold {
+  font-weight: 500;
+}
+.film-title {
+  font-size: 22px;
+  font-weight: 600;
+}

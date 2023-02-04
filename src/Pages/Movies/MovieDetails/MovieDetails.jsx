@@ -12,12 +12,14 @@ export const MovieDetails = () => {
     return `https://www.themoviedb.org/t/p/w220_and_h330_face${posterPath}`;
   };
   const poster = getPosterUrl(currentMovie.poster_path);
+  // const genres = currentMovie.genres.map(genre => genre.name);
 
   useEffect(() => {
     FetchMovieDetails(movieId).then(data => {
       setCurrentMovie(data);
     });
   }, [movieId]);
+  console.log(currentMovie);
 
   return (
     <>
@@ -25,15 +27,23 @@ export const MovieDetails = () => {
         <div className="movie-container">
           <img src={poster} alt="poster" className="poster" />
 
-          <div className="text-container">
-            <p className="film-title">
-              {currentMovie.title}
-              {currentMovie.release_date}
-            </p>
-            <p>Popularity - {currentMovie.popularity}</p>
-            <p>Overview - {currentMovie.overview}</p>
-            {/* <p>Genres - {currentMovie.genres} </p> */}
-          </div>
+          {currentMovie && (
+            <div className="text-container">
+              <p className="film-title ">
+                {currentMovie.title}
+                <span>({currentMovie.release_date.slice(0, 4)})</span>
+              </p>
+              <p>
+                <span className="film-bold"> Popularity -</span>
+                {currentMovie.popularity}
+              </p>
+              <p>
+                <span className="film-bold">Overview -</span>
+                {currentMovie.overview}
+              </p>
+              {/* <p>Genres: {genres}</p> */}
+            </div>
+          )}
         </div>
       )}
     </>
