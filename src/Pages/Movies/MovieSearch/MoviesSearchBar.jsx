@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { FetchByName } from './FetchByName/FetchByName';
+import { FetchByName } from '../FetchByName/FetchByName';
 import './MovieSearchBar.css';
-export const MoviesSearchBar = () => {
+export const MoviesSearch = ({ setMovies }) => {
   const [Searchbar, setSearchbar] = useState('');
-  const [Films, setFilms] = useState([]);
 
   const onSearchBarChange = e => setSearchbar(e.currentTarget.value);
 
@@ -11,7 +10,7 @@ export const MoviesSearchBar = () => {
     e.preventDefault();
 
     if (Searchbar !== '') {
-      FetchByName(Searchbar).then(data => setFilms(data));
+      FetchByName(Searchbar).then(data => setMovies(data));
     }
   };
 

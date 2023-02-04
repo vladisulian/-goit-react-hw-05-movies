@@ -10,6 +10,7 @@ export const App = () => {
         <Route path="/goit-react-hw-05-movies" element={<Layout />}>
           <Route index element={<Homepage />} />
           <Route path="movies" element={<Movies />} />
+          {/* <Route path="movies/:movieId" element={<Movies />} /> */}
         </Route>
       </Routes>
     </>
