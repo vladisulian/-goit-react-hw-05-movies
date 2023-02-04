@@ -13,7 +13,7 @@ const toastOptions = {
   pauseOnHover: true,
   draggable: true,
   progress: undefined,
-  theme: 'light',
+  theme: 'colored',
 };
 export const MoviesSearch = ({ setMovies }) => {
   const [Searchbar, setSearchbar] = useState('');

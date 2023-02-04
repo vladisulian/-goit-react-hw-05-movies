@@ -7,14 +7,19 @@ export const MovieDetails = () => {
   const { movieId } = useParams();
   const [currentMovie, setCurrentMovie] = useState({});
 
+  const getPosterUrl = posterPath => {
+    return `https://www.themoviedb.org/t/p/w220_and_h330_face${posterPath}`;
+  };
+  const poster = getPosterUrl(currentMovie.poster_path);
+
   useEffect(() => {
     FetchMovieDetails(movieId).then(data => {
       setCurrentMovie(data);
     });
   }, [movieId]);
+
   return (
     <>
-      {/* <RenderMovieDetails movie={currentMovie} /> */}
       {movieId && (
         <p>
           <div>
@@ -25,7 +30,7 @@ export const MovieDetails = () => {
             <p>Popularity - {currentMovie.popularity}</p>
             <p>Overview - {currentMovie.overview}</p>
             <p>Genres - </p>
-            <img src={currentMovie.poster_path} alt="poster" />
+            <img src={poster} alt="poster" />
           </div>
         </p>
       )}
