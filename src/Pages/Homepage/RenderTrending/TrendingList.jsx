@@ -1,3 +1,8 @@
 export const TrendingList = ({ children }) => {
-  return <ul>{children}</ul>;
+  return (
+    <>
+      <h3>In trends this day!</h3>
+      <ul>{children}</ul>
+    </>
+  );
 };
