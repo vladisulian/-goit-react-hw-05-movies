@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
 
 import { FetchTrending } from 'Pages/Homepage/FetchTrending/Fetch-trending';
-import { Header } from './Header/Header';
 import { RenderTrending } from './RenderTrending/RenderTrending';
 import { TrendingList } from './RenderTrending/TrendingList';
 
@@ -16,11 +14,8 @@ export const Homepage = () => {
   }, []);
 
   return (
-    <>
-      <Header />
-      <TrendingList>
-        <RenderTrending trendFilms={trending} />
-      </TrendingList>
-    </>
+    <TrendingList>
+      <RenderTrending trendFilms={trending} />
+    </TrendingList>
   );
 };

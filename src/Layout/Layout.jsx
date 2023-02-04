@@ -1,3 +1,4 @@
+import './Header.css';
 import { NavLink, Outlet } from 'react-router-dom';
 
 export const Layout = () => {
@@ -5,8 +6,8 @@ export const Layout = () => {
     <>
       <header>
         <nav className="navigation">
-          <NavLink to={'/'}>Home</NavLink>
-          <NavLink to={'/movies'}>Movies</NavLink>
+          <NavLink to={''}>Home</NavLink>
+          <NavLink to={'movies'}>Movies</NavLink>
         </nav>
       </header>
 
