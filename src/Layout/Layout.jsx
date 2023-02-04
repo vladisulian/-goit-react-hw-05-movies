@@ -1,4 +1,4 @@
-import './Header.css';
+import './Layout.css';
 import './Base.css';
 import { NavLink, Outlet } from 'react-router-dom';
 
@@ -15,6 +15,8 @@ export const Layout = () => {
       <main>
         <Outlet />
       </main>
+
+      <footer></footer>
     </>
   );
 };
