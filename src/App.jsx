@@ -1,7 +1,7 @@
 import { Homepage } from 'Pages/Homepage/Homepage';
 import { Layout } from 'Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
-import { Movies } from 'Pages/Movies/MoviesSearchBar';
+import { Movies } from 'Pages/Movies/Movies';
 
 export const App = () => {
   return (

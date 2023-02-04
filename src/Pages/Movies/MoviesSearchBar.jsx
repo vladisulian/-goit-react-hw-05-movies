@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FetchByName } from './FetchByName/FetchByName';
 import './MovieSearchBar.css';
-export const Movies = () => {
+export const MoviesSearchBar = () => {
   const [Searchbar, setSearchbar] = useState('');
   const [Films, setFilms] = useState([]);
 
@@ -11,13 +11,9 @@ export const Movies = () => {
     e.preventDefault();
 
     if (Searchbar !== '') {
-      FetchByName(Searchbar).then(data =>setFilms(data));
-      
+      FetchByName(Searchbar).then(data => setFilms(data));
     }
   };
-  useEffect(() => {
-    console.log(Films);
-  }, [Films]);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -27,6 +23,7 @@ export const Movies = () => {
           name="movie-name"
           placeholder="Search film by name"
           onChange={onSearchBarChange}
+          autoComplete="off"
         />
       </label>
       <button type="submit" className="submit-button">
