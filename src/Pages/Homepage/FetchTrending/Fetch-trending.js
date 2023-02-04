@@ -4,6 +4,6 @@ export async function FetchTrending() {
 
   const response = await axios.get(`
   https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`);
-//   console.log(response.data.results);
+    console.log(response.data.results);
   return response.data.results;
 }
