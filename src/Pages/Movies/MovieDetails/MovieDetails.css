@@ -1,0 +1,9 @@
+p {
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.movie-container {
+  display: flex;
+  gap: 20px;
+}
