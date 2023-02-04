@@ -1,3 +1,4 @@
+import './MovieSearchBar.css'
 export const Movies = () => {
   return (
     <form>
@@ -8,7 +9,7 @@ export const Movies = () => {
           placeholder="Search film by name"
         />
       </label>
-      <button type="submit">Search</button>
+      <button type="submit" className='submit-button'>Search</button>
     </form>
   );
 };

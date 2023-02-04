@@ -1,0 +1,20 @@
+input {
+  border: 1px solid black;
+  outline: transparent;
+  transition: all 350ms ease;
+  margin-right: 5px;
+}
+input:hover,
+input:focus {
+  border: 1px solid deepskyblue;
+}
+.submit-button {
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgb(3, 147, 196);
+
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: deepskyblue;
+}
