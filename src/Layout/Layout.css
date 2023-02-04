@@ -26,6 +26,9 @@ a {
 a:hover {
   color: orange;
 }
+.active {
+  color: orange;
+}
 
 main {
   padding: 60px 0;
