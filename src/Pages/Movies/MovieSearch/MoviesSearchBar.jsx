@@ -31,7 +31,6 @@ export const MoviesSearch = ({ setMovies }) => {
       });
     }
   };
-  // data > 0
 
   return (
     <>
