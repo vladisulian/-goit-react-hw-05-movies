@@ -3,10 +3,11 @@ export const RenderCast = ({ cast }) => {
   console.log('cast from RenderCast.jsx', cast);
 
   return cast.map(actor => {
-    return (
-      <li key={actor.id}>
-        <img src={getPosterUrl(actor.profile_path)} alt="poster" />
-      </li>
-    );
+    if (actor.profile_path)
+      return (
+        <li key={actor.id}>
+          <img src={getPosterUrl(actor.profile_path)} alt="poster" />
+        </li>
+      );
   });
 };

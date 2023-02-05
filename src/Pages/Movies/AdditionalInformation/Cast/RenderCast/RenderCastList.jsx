@@ -1,3 +1,3 @@
 export const RenderCastList = ({ children }) => {
-  return <ul>{children}</ul>;
+  return <ul className="cast-list">{children}</ul>;
 };

@@ -11,6 +11,8 @@ export const getPosterUrl = posterPath => {
 export const MovieDetails = () => {
   const { movieId } = useParams();
   const [currentMovie, setCurrentMovie] = useState({});
+  // const [castButtonActive, setCastButtonActive] = useState(true);
+  // const [reviewsButtonActive, setreviewsButtonActive] = useState(true);
 
   const poster = getPosterUrl(currentMovie.poster_path);
 
@@ -28,30 +30,30 @@ export const MovieDetails = () => {
 
   return (
     <>
-      <div className="movie-container">
-        <img src={poster} alt="poster" className="poster" />
-        <div className="text-container">
-          <p className="film-title ">
-            {currentMovie.title}
-            <span>({currentMovie.release_date})</span>
-          </p>
-          <p className="film-bold">Popularity</p>
-          <span className="popularity">{currentMovie.popularity}</span>
-          <p className="film-bold overview">Overview</p>
-          <p className="overview-desc">{currentMovie.overview}</p>
-          {/* <p>Genres: {genres}</p> */}
-          <h4>Additional information</h4>
-          <ul>
-            <li>
-              <Link to={`cast`}>Cast</Link>
-            </li>
-            <li>
-              <Link to={`reviews`}>Reviews</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
       <Suspense fallback={<h4>Please, wait a bit. Loading...</h4>}>
+        <div className="movie-container">
+          <img src={poster} alt="poster" className="poster" />
+          <div className="text-container">
+            <p className="film-title ">
+              {currentMovie.title}
+              <span>({currentMovie.release_date})</span>
+            </p>
+            <p className="film-bold">Popularity</p>
+            <span className="popularity">{currentMovie.popularity}</span>
+            <p className="film-bold overview">Overview</p>
+            <p className="overview-desc">{currentMovie.overview}</p>
+            {/* <p>Genres: {genres}</p> */}
+            <h4>Additional information</h4>
+            <ul>
+              <li>
+                <Link to={`cast`}>Cast</Link>
+              </li>
+              <li>
+                <Link to={`reviews`}>Reviews</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
         <Outlet />
       </Suspense>
     </>
