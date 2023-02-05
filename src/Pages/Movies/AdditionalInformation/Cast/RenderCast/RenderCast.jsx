@@ -6,7 +6,7 @@ export const RenderCast = ({ cast }) => {
     if (actor.profile_path)
       return (
         <li key={actor.id}>
-          <img src={getPosterUrl(actor.profile_path)} alt="poster" />
+          <img src={getPosterUrl(actor.profile_path)} alt='actorPhoto' />
         </li>
       );
   });
