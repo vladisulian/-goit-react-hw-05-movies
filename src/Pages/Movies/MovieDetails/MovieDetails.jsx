@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FetchMovieDetails } from './FetchMovieDetails';
 import './MovieDetails.css';
@@ -34,13 +35,22 @@ export const MovieDetails = () => {
           <div className="text-container">
             <p className="film-title ">
               {currentMovie.title}
-              <span >({currentMovie.release_date})</span>
+              <span>({currentMovie.release_date})</span>
             </p>
             <p className="film-bold">Popularity</p>
             <span className="popularity">{currentMovie.popularity}</span>
             <p className="film-bold overview">Overview</p>
             <p className="overview-desc">{currentMovie.overview}</p>
             {/* <p>Genres: {genres}</p> */}
+            <h4>Additional information</h4>
+            <ul>
+              <li>
+                <Link to={`${movieId}/cast`}>Cast</Link>
+              </li>
+              <li>
+                <Link to={`${movieId}/reviews`}>Reviews</Link>
+              </li>
+            </ul>
           </div>
         )}
       </div>

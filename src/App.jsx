@@ -12,6 +12,8 @@ export const App = () => {
           <Route index element={<Homepage />} />
           <Route path="movies" element={<Movies />} />
           <Route path="movies/:movieId" element={<MovieDetails />} />
+          <Route path="movies/:movieId/cast"></Route>
+          <Route path="movies/:movieId/reviews"></Route>
           <Route path="*" element={<h1>Not found</h1>} />
         </Route>
       </Routes>
