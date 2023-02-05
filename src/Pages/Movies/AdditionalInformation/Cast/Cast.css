@@ -7,7 +7,22 @@
   margin: 25px auto;
 
   list-style-type: none;
+  
+  border: 1px solid rgb(0 0 0 / 40%);
+  border-radius: 25px;
+  padding-top: 25px;
 }
 .cast-list img {
   width: 135px;
+}
+
+.actor-name {
+  font-weight: 500;
+}
+.actor p {
+  text-align: center;
+}
+.actor-character {
+  font-style: italic;
+  font-weight: 800;
 }
