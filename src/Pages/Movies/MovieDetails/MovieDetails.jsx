@@ -45,10 +45,10 @@ export const MovieDetails = () => {
             <h4>Additional information</h4>
             <ul>
               <li>
-                <Link to={`${movieId}/cast`}>Cast</Link>
+                <Link to={`cast`}>Cast</Link>
               </li>
               <li>
-                <Link to={`${movieId}/reviews`}>Reviews</Link>
+                <Link to={`reviews`}>Reviews</Link>
               </li>
             </ul>
           </div>
