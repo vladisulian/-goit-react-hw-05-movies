@@ -2,7 +2,11 @@ p {
   font-family: Roboto;
   font-weight: 300;
 }
-
+img {
+  box-shadow: 10px 10px 32px -8px rgb(0 0 0 / 75%);
+  border: 3px solid black;
+  border-radius: 22px;
+}
 .movie-container {
   display: flex;
   gap: 20px;
