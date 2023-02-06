@@ -2,15 +2,26 @@ import { Layout } from 'Layout/Layout';
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { Homepage } from 'Pages/Homepage/Homepage';
-import { Movies } from 'Pages/Movies/Movies';
-import { MovieDetails } from 'Pages/Movies/MovieDetails/MovieDetails';
-import { Cast } from 'Pages/Movies/AdditionalInformation/Cast/Cast';
-import { Reviews } from 'Pages/Movies/AdditionalInformation/Reviews/Reviews';
-import { NotFoundPage } from 'Pages/NotFoundPage/NotFoundPage';
-
-// const Homepage = lazy(() => import('./Pages/Homepage/Homepage'));
 // console.log(Homepage);
+// import { Homepage } from 'Pages/Homepage/Homepage';
+// import { Movies } from 'Pages/Movies/Movies';
+// import { MovieDetails } from 'Pages/Movies/MovieDetails/MovieDetails';
+// import { Cast } from 'Pages/Movies/AdditionalInformation/Cast/Cast';
+// import { Reviews } from 'Pages/Movies/AdditionalInformation/Reviews/Reviews';
+// import { NotFoundPage } from 'Pages/NotFoundPage/NotFoundPage';
+
+const Homepage = lazy(() => import('./Pages/Homepage/Homepage'));
+const Movies = lazy(() => import('./Pages/Movies/Movies'));
+const MovieDetails = lazy(() =>
+  import('./Pages/Movies/MovieDetails/MovieDetails')
+);
+const Cast = lazy(() =>
+  import('./Pages/Movies/AdditionalInformation/Cast/Cast')
+);
+const Reviews = lazy(() =>
+  import('./Pages/Movies/AdditionalInformation/Reviews/Reviews')
+);
+const NotFoundPage = lazy(() => import('./Pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
   return (

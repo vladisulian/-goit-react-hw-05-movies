@@ -3,7 +3,7 @@ import { FetchTrending } from 'Pages/API/API';
 import { RenderTrending } from './RenderTrending/RenderTrending';
 import { TrendingList } from './RenderTrending/TrendingList';
 
-export const Homepage = () => {
+const Homepage = () => {
   const [trending, setTrending] = useState([]);
 
   useEffect(() => {
@@ -18,3 +18,5 @@ export const Homepage = () => {
     </TrendingList>
   );
 };
+
+export default Homepage

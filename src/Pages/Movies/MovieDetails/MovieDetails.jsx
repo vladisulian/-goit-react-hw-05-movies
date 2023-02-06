@@ -12,7 +12,7 @@ export const getPosterUrl = posterPath => {
   }
 };
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [currentMovie, setCurrentMovie] = useState({});
   // const [castButtonActive, setCastButtonActive] = useState(true);
@@ -57,3 +57,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;

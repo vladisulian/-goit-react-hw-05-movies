@@ -5,7 +5,7 @@ import { FetchCast } from 'Pages/API/API';
 import { RenderCast } from './RenderCast/RenderCast';
 import { RenderCastList } from './RenderCast/RenderCastList';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState([]);
   const { movieId } = useParams();
 
@@ -24,3 +24,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

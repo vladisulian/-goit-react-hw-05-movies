@@ -3,7 +3,7 @@ import { MovieList } from './MovieList&Items/MovieList';
 import { MovieItem } from './MovieList&Items/MovieItem';
 import { useState } from 'react';
 
-export const Movies = () => {
+const Movies = () => {
   const [Movies, setMovies] = useState([]);
 
   const handleSetMovies = movieName => setMovies(movieName);
@@ -17,3 +17,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;
