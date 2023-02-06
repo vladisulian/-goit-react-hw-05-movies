@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './Reviews.css';
-import { API_KEY } from '../Cast/FetchCast';
+import { API_KEY } from 'Pages/API/API';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { RenderReviewsList } from './RenderReviews/RenderReviewList';

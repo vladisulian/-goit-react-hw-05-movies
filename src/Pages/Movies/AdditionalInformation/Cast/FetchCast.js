@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const API_KEY = '635ac74a11f3f55a21a984cd556f5915';
+import { API_KEY } from 'Pages/API/API';
 
 export async function FetchCast(id) {
   const response = await axios.get(
