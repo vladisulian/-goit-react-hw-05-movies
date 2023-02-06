@@ -1,7 +1,7 @@
-import './Cast.css'
+import './Cast.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { FetchCast } from './FetchCast';
+import { FetchCast } from 'Pages/API/API';
 import { RenderCast } from './RenderCast/RenderCast';
 import { RenderCastList } from './RenderCast/RenderCastList';
 

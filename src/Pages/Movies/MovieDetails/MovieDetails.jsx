@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { FetchMovieDetails } from './FetchMovieDetails';
+import { FetchMovieDetails } from 'Pages/API/API';
 import './MovieDetails.css';
 
 export const getPosterUrl = posterPath => {
@@ -25,12 +25,6 @@ export const MovieDetails = () => {
       .then(data => setCurrentMovie(data))
       .catch(error => console.log(error));
   }, [movieId]);
-
-  // const getReleaseDate = () => {
-  //   return currentMovie.release_date.slice(0, 4);
-  // };
-  // const releaseDate = getReleaseDate();
-  // const genres = currentMovie.genres.map(genre => genre.name);
 
   return (
     <>

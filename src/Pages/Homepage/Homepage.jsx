@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-
-import { FetchTrending } from 'Pages/Homepage/FetchTrending/Fetch-trending';
+import { FetchTrending } from 'Pages/API/API';
 import { RenderTrending } from './RenderTrending/RenderTrending';
 import { TrendingList } from './RenderTrending/TrendingList';
 

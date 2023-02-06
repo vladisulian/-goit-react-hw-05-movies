@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './MovieSearchBar.css';
 import { useState } from 'react';
-import { FetchByName } from '../FetchByName/FetchByName';
+import { FetchByName } from 'Pages/API/API';
 import { useSearchParams } from 'react-router-dom';
 
 const toastOptions = {
