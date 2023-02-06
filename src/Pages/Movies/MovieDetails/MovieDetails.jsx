@@ -34,7 +34,7 @@ const MovieDetails = () => {
           <div className="text-container">
             <p className="film-title ">
               {currentMovie.title}
-              <span>({String(currentMovie.release_date).slice(0, 4)})</span>
+              <span> ({String(currentMovie.release_date).slice(0, 4)})</span>
             </p>
             <p className="film-bold">Popularity</p>
             <span className="popularity">{currentMovie.popularity}</span>
