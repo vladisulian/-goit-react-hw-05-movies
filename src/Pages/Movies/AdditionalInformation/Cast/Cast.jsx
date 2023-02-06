@@ -1,9 +1,10 @@
 import './Cast.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import { FetchCast } from 'Pages/API/API';
 import { RenderCast } from './RenderCast/RenderCast';
 import { RenderCastList } from './RenderCast/RenderCastList';
+import { Loading } from 'Pages/Loading/Loading';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -18,9 +19,11 @@ const Cast = () => {
 
   return (
     <>
-      <RenderCastList>
-        <RenderCast cast={cast} />
-      </RenderCastList>
+      <Suspense fallback={<Loading />}>
+        <RenderCastList>
+          <RenderCast cast={cast} />
+        </RenderCastList>
+      </Suspense>
     </>
   );
 };

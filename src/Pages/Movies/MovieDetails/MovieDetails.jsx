@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FetchMovieDetails } from 'Pages/API/API';
 import './MovieDetails.css';
+import { Loading } from 'Pages/Loading/Loading';
 
 export const getPosterUrl = posterPath => {
   if (String(posterPath).includes('https:')) {
@@ -28,7 +29,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Suspense fallback={<h4>Please, wait a bit. Loading...</h4>}>
+      <Suspense fallback={<Loading />}>
         <div className="movie-container">
           <img src={poster} alt="poster" className="poster" />
           <div className="text-container">
