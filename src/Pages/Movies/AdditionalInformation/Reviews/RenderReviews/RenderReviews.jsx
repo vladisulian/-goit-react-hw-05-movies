@@ -2,7 +2,7 @@ import { getPosterUrl } from 'Pages/Movies/MovieDetails/MovieDetails';
 
 export const RenderReviews = ({ reviews }) => {
   if (reviews.length === 0) {
-    return <h1>There is now reviews</h1>;
+    return <h1>There is no reviews :(</h1>;
   } else {
     return reviews.map(review => {
       let avatar = getPosterUrl(review.author_details.avatar_path);
