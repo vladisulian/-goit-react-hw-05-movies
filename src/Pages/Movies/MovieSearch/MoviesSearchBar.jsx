@@ -20,7 +20,7 @@ export const MoviesSearch = ({ setMovies }) => {
   const [Searchbar, setSearchbar] = useState('');
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const searchQuery = searchParams.get('search') ?? "";
+  const searchQuery = searchParams.get('search') ?? '';
 
   const updateQueryString = search => {
     const nextParams = search !== '' ? { search } : {};
@@ -50,9 +50,9 @@ export const MoviesSearch = ({ setMovies }) => {
             placeholder="Search film by name"
             value={searchQuery}
             onChange={e => {
-              updateQueryString(e.target.value);
               setSearchParams({ search: e.target.value });
               onSearchBarChange(e);
+              updateQueryString(e.target.value);
             }}
             autoComplete="off"
           />
