@@ -5,7 +5,11 @@ import { FetchMovieDetails } from './FetchMovieDetails';
 import './MovieDetails.css';
 
 export const getPosterUrl = posterPath => {
-  return `https://www.themoviedb.org/t/p/w220_and_h330_face${posterPath}`;
+  if (String(posterPath).includes('https:')) {
+    return posterPath.slice(1);
+  } else {
+    return `https://www.themoviedb.org/t/p/w220_and_h330_face${posterPath}`;
+  }
 };
 
 export const MovieDetails = () => {
