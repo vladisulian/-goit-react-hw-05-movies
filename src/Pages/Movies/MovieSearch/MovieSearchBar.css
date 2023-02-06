@@ -1,20 +1,36 @@
 input {
-  border: 1px solid black;
+  border: 1px solid blue;
   outline: transparent;
   transition: all 350ms ease;
-  margin-right: 5px;
+  margin-right: 30px;
+
+  height: 40px;
+  border-radius: 22px;
+  padding-left: 15px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
 }
 input:hover,
 input:focus {
   border: 1px solid deepskyblue;
 }
 .submit-button {
-  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+  
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+
   background-color: white;
   border: 1px solid rgb(3, 147, 196);
+  border-radius: 22px;
 
+  transition: all 350ms ease;
   cursor: pointer;
 }
 .submit-button:hover {
-  background-color: deepskyblue;
+  background: deepskyblue;
+  color: white;
 }

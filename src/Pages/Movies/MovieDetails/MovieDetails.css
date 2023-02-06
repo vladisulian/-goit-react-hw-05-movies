@@ -43,3 +43,7 @@ p:nth-child(2),
   font-style: italic;
   font-weight: 600;
 }
+.overview-desc {
+  font-size: 18px;
+}
+
