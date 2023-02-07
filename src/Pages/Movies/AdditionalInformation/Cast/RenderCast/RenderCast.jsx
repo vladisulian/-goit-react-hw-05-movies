@@ -1,7 +1,7 @@
 import { getPosterUrl } from 'Pages/Movies/MovieDetails/MovieDetails';
 export const RenderCast = ({ cast }) => {
-  console.log('cast from RenderCast.jsx', cast);
-  if (cast.length > 0) {
+  // console.log('cast from RenderCast.jsx', cast);
+  if (cast.length !== 0) {
     return cast.map(actor => {
       if (actor.profile_path)
         return (

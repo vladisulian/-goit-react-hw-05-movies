@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FetchMovieDetails } from 'Pages/API/API';
 import './MovieDetails.css';
@@ -16,8 +16,9 @@ export const getPosterUrl = posterPath => {
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [currentMovie, setCurrentMovie] = useState({});
-  // const [castButtonActive, setCastButtonActive] = useState(true);
-  // const [reviewsButtonActive, setreviewsButtonActive] = useState(true);
+
+  const location = useLocation();
+  const backLink = location.state?.from ?? '/goit-react-hw-05-movies';
 
   const poster = getPosterUrl(currentMovie.poster_path);
 
@@ -30,6 +31,9 @@ const MovieDetails = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
+        <Link to={backLink} className="back-home-link">
+          Back home
+        </Link>
         <div className="movie-container">
           <img src={poster} alt="poster" className="poster" />
           <div className="text-container">
@@ -45,10 +49,14 @@ const MovieDetails = () => {
             <h4>Additional information</h4>
             <ul>
               <li>
-                <Link to={`cast`}>Cast</Link>
+                <Link to={`cast`} state={{ from: location }}>
+                  Cast
+                </Link>
               </li>
               <li>
-                <Link to={`reviews`}>Reviews</Link>
+                <Link to={`reviews`} state={{ from: location }}>
+                  Reviews
+                </Link>
               </li>
             </ul>
           </div>

@@ -11,6 +11,7 @@ img {
   display: flex;
   gap: 20px;
   padding-left: 25px;
+  padding-top: 35px;
 }
 .movie-container img {
   border: 10px solid black;
@@ -46,4 +47,3 @@ p:nth-child(2),
 .overview-desc {
   font-size: 18px;
 }
-
